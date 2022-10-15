@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block titulo %}
+Editar usuario
+{% endblock %}
+{% block content %}
+<section id="fondo-config" class="felx-usuarios">
+    <div>         
+        <h3 class="felx-config">Configuración</h3>
+        <br>
+    </div>
+    <img id="avatar" src="static/img/avatar/{{ current_user.id }}.svg" alt="Avatar" onerror='this.style.display = "none"' />
+         <div class="felx-usuarios">
+            <center><p>Presiona en generar avatar, hasta encontrar el adecuado...</p></center>
+            <div class="felx-config">  
+                
+                <form action="/generar_avatar" method="POST"> 
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
+                    {% if current_user.is_authenticated %}
+                    <input type="hidden" name="id" value="{{ current_user.id }}">
+                    {% endif %}    
+                    
+                    <button class="css-button-shadow-border--green">Crear Avatar Aleatorio</button>                       
+                </form>
+                        
+            </div>
+            <center><p>Completa y edita datos de usuario.</p></center>
+            <div class="felx-config"> 
+                <form action="/editar_usuario" method="POST"> 
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
+                    {% if current_user.is_authenticated %}
+                    <input type="hidden" name="id" value="{{ current_user.id }}">
+                    {% endif %}
+                    
+                        <button class="css-button-shadow-border--yellow">Editar datos de usuario</button>                       
+                </form>   
+                <br>  
+                    
+            </div>
+        </div>
+        <br>
+    <div class="felx-usuarios">
+        <center>
+        {% if current_user.is_authenticated %}
+        <p>Nombre de usuario:  {{ current_user.username }} </p>
+        <p>Tipo de usuario:  {{ current_user.tipo }} </p>                
+
+        {% endif %}
+        </center>
+    </div>
+</section>
+{% endblock %}
