@@ -9,6 +9,7 @@ from config import config
 from flask_login import LoginManager
 import controlador
 import avatar
+import contacto
 
 
 
@@ -62,8 +63,21 @@ def login():
             return render_template('auth/login.html')
     else:
         return render_template('auth/login.html')
-#---------------------------------------------
+#----------------------Contacto-----------------------
+@app.route("/ingresoContacto")
+def ingresoContacto():
+    return render_template("contacto.html")
 
+
+
+@app.route("/envioContacto", methods=["POST"])
+def envioContacto():
+    ingreso_asunto = request.form["asunto"]
+    ingreso_cuerpo = request.form["cuerpo"]
+    
+    contacto.contacto(ingreso_asunto, ingreso_cuerpo)
+    # De cualquier modo, y si todo fue bien, redireccionar
+    return redirect("/home")
 #---------------------------------------------
 
 
