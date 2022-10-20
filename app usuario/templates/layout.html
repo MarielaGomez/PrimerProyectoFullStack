@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>{% block titulo %}{% endblock %}</title>
+    {% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/iconos.css') }}">
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
+{% endblock %}
+<body>
+    <nav>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> 
+        <div class = "container">
+        <div class="container-logo">
+            <h2><span><img src="static/img/logo-header.png" height="80px"></span>
+                {% if current_user.is_authenticated %}
+                <span id="spn">Bienvenido, {{ current_user.username }}</span></h2>
+                {% else %}
+                    <div id="spn2">
+                        <a href="/login" class="caja-toggle text-toggle">Login</a>
+                    </div>
+                    <div  id="spn3">
+                        <a href="/registro" class="caja-toggle text-toggle">Registro</a>  
+                    </div>
+                    
+                {% endif %}
+            
+            
+        </div>
+        <ul class="links" > 
+            
+            <section class="flex-container">           
+                {% if current_user.is_authenticated %}
+                
+                <span id="spn4">Bienvenido, {{ current_user.username }}</span></h2>
+                
+                <div class="caja-toggle">
+                    <a href="home" class="caja-toggle">
+                    <img src="/static/img/iconos/home_white_24dp.svg" class="material-icons">
+                    <li class="text-toggle">Inicio</li>
+                    </a>                    
+                </div>
+                <div class="caja-toggle">
+                    <a href="/config_usuario" class="caja-toggle">
+                    
+                    <img src="/static/img/iconos/manage_accounts_white_24dp.svg" class="material-icons"> 
+                    <li class="text-toggle">Configuración</li>
+                    </a>
+                </div>
+                
+                
+                <div class="caja-toggle">
+                    <a href="logout" class="caja-toggle">
+                    <img src="/static/img/iconos/logout_white_24dp.svg" class="material-icons">           
+                    <li class="text-toggle">Logout</li>
+                    </a>
+                </div>
+                <div class="caja-toggle">
+                    <a href="/ingresoContacto" class="caja-toggle">
+                    <img src="/static/img/iconos/account_circle_white_24dp.svg" class="material-icons"> 
+                    <li class="text-toggle">Contacto</li>
+                    </a>
+                </div>
+            </section>
+                     
+            {% else %}
+            <section class="flex-container"></section>
+
+                
+                <div class="caja-toggle">
+                    <a href="/" class="caja-toggle">
+                    <img src="/static/img/iconos/home_white_24dp.svg" class="material-icons">                                   
+                    <li class="text-toggle">Inicio</li> 
+                    </a>                   
+                </div>
+                
+                
+                
+                <div class="caja-toggle">
+                    <a href="/login" class="caja-toggle">
+                    <img src="/static/img/iconos/account_circle_white_24dp.svg" class="material-icons"> 
+                    <li class="text-toggle">Login</li>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="caja-toggle">
+                    <a href="/registro" class="caja-toggle">
+                    <img src="/static/img/iconos/assignment_ind_white_24dp.svg" class="material-icons">
+                    <li class="text-toggle">Registro</li>
+                    </a>
+                </div>
+
+                <div class="caja-toggle">
+                    <a href="/ingresoContacto" class="caja-toggle">
+                    <img src="/static/img/iconos/account_circle_white_24dp.svg" class="material-icons"> 
+                    <li class="text-toggle">Contacto</li>
+                    </a>
+                </div>
+
+            </section>
+            
+            {% endif %}
+        </ul>
+        <div class="toggle">
+            |||
+        </div>
+        </vdi>
+    </nav> 
+    
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/toggle.js') }}"></script> 
+</body>
+</html>
+
+
