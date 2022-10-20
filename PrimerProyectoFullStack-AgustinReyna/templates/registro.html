@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block title %} Registro de usuario{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type = "text/css" href="{{url_for('static', filename='css/style.css')}}">
+    
+    <section id="registro-fondo" class="felx-usuarios">
+        <div class="felx-usuarios">
+            <form class=form action="/registro" id = "formLogin" method="POST" onsubmit="return validacion()">
+                {% with messages = get_flashed_messages() %}
+
+                {% if messages %}
+                <br />
+                {% for message in messages %}
+                <div class="alert alert-primary alert-dismissible" role="alert">
+                    <strong>{{ message }}</strong>                
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                {% endwith %}
+
+                <h3 class="form_titulo">Registro</h3><br>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div class="form-floating">
+                <div class="form-group">
+                    <label>Nombre de usuario:</label>
+                    <input type="text" class="form-input" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipo Usuario:</label>
+                    <select class="form-input" name= "tipo">
+                        <option></option>
+                        {% for tipo in tipo %}
+                        <option value="{{tipo[1]}}" >{{tipo[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nivel de usuario:</label>
+                    
+                    <select class="form-input" name= "level">
+                        <option></option>
+                        {% for int in level %}
+                        <option value="{{int[0]}}">{{ int[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                    
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-input" id="email" name="email" >
+                </div>
+
+                <div class="form-group">
+                    <label>Contraseña:</label>
+                    <input type="password" class="form-input" id="password" name="password">
+                </div>
+
+                <div class="form-group">
+                    <label>repetir ontraseña:</label>
+                    <input type="password" class="form-input" id="pass2" name="pass2">
+                </div>
+                <div id="error"></div>
+
+                <div class="form-group">
+                    <br>
+                    <button class="css-button-shadow-border--green" onclick="history.go(1)">Registrar</button>
+                </div>
+
+            </form>
+
+        
+
+        </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/valAlta.js') }}"></script> 
+{% endblock %}
