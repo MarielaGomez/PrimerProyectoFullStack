@@ -1,4 +1,4 @@
-[LandingPage-main.zip](https://github.com/MarielaGomez/PrimerProyectoFullStack/files/9650610/LandingPage-main.zip)
+
 [Planilla Propuestas de Proyecto.pdf](https://github.com/MarielaGomez/PrimerProyectoFullStack/files/9602978/Planilla.Propuestas.de.Proyecto.pdf)
 # PrimerProyectoFullStack
 
