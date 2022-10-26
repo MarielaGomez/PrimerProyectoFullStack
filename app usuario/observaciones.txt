@@ -1,0 +1,4 @@
+Pendientes:
+mejorar formulario de envío de correo, solo esta funcional.
+Ordenar archivos en general.
+limpieza de codigo en general.

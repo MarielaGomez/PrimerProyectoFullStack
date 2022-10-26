@@ -38,7 +38,7 @@ def load_user(id):
 
 @app.route('/')
 def index():
-    return render_template('contenido.html')
+    return render_template('premium/index.html')
 
 
 # login ---------------------
@@ -208,7 +208,7 @@ def actualizar_usuario():
 @app.route('/logout')
 def logout():
     logout_user()
-    return render_template('contenido.html')
+    return render_template('premium/index.html')
 
 @app.route('/home')
 @login_required
