@@ -2,3 +2,7 @@ Pendientes:
 mejorar formulario de envío de correo, solo esta funcional.
 Ordenar archivos en general.
 limpieza de codigo en general.
+Cambiar toggle por version con bootstrap 5
+
+
+Se se puede observar funcionando version preliminar en la ip: 190.96.112.66

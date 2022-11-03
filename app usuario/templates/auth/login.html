@@ -5,23 +5,26 @@
 
 {% block content %}
 
-<body>
+<body class="fondo-config">
     <center>
-    <section class="form-main">
-        <div class="form-content">
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-            <div class="circle-3"></div>
-            <div class="box">
-                <h3>Bienvenido</h3>
+    <section>
+        <div class="container-sm bg-dark opacity-cero-nueve">
+            
+            <div class="row m-3 text-light">
+
+                <div">
+                    <br>
+                    <h3>Bienvenido</h3>
+                </div>
+                
                 
                 <form action="/login" id = "formLogin" method="POST" onsubmit="return validacion()">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="100" height="60">
+                <img class="" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="200" height="120">
                 {% with messages = get_flashed_messages() %}
 
                 {% if messages %}
-                <br />
+                
                 {% for message in messages %}
                 <div class="alert alert-primary alert-dismissible" role="alert">
                     <strong>{{ message }}</strong>
@@ -33,24 +36,26 @@
                 {% endwith %}
 
                     
-                    <div class="form-floating">
-                    <div class="input-box">
-                        <input id= "username" name="username" type="text" placeholder="Usuario" class="input-control">
-                    </div>
-                    <div class="input-box">
-                        <input id= "pass1" name="password" type="password" placeholder="Contraseña" class="input-control">
-                        <div id="error"></div>
-                        <div class="input-link">
-                            <a href="#" class="gradient-text">Has olvidado tu contraseña</a>
-                            
+                    <div class="">
+                        <div class="">
+                            <input id= "username" name="username" type="text" placeholder="Usuario" class="form-control  frm-wh">
                         </div>
+                        <div class="">
+                            <br>
+                            <input id= "pass1" name="password" type="password" placeholder="Contraseña" class="form-control frm-wh">
+                            <div id="error"></div>
+                            <div class="input-link">
+                                <br>
+                                <a href="#" class="text-light">Has olvidado tu contraseña</a>
+                                
+                            </div>
                     </div>
-                    <button type="submit" class="brn">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn btn-primary m-3">Iniciar Sesión</button>
                 </form>
                 <br/>
                 <br />
-                <p>No tienes una cuenta?<a href="{{ url_for('registro') }}" class="gradient-text"> Crear cuenta</a></p>
-                
+                <p class="text-light">No tienes una cuenta?<a href="{{ url_for('registro') }}" class="m-3">Crear cuenta</a></p>
+                <br><br><br>
             </div>
         </div>
     </section> 

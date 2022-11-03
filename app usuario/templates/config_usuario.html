@@ -3,49 +3,66 @@
 Editar usuario
 {% endblock %}
 {% block content %}
-<section id="fondo-config" class="felx-usuarios">
-    <div>         
-        <h3 class="felx-config">Configuración</h3>
-        <br>
-    </div>
-    <img id="avatar" src="static/img/avatar/{{ current_user.id }}.svg" alt="Avatar" onerror='this.style.display = "none"' />
-         <div class="felx-usuarios">
-            <center><p>Presiona en generar avatar, hasta encontrar el adecuado...</p></center>
-            <div class="felx-config">  
+<center>
+<section class="fondo-config">
+    <div class=" text-light">
+        <div class="container-sm bg-dark opacity-cero-nueve">
+                    <div class="">         
+                        <h3>Configuración</h3>
+                        <br>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                    <img id="avatar" src="static/img/avatar/{{ current_user.id }}.svg" alt="Avatar" onerror='this.style.display = "none"' />
+                    </div>
+
+            <div>
+                <p>Presiona en generar avatar, hasta encontrar el adecuado...</p>
+                <div class="">  
+                    
+                    <form action="/generar_avatar" method="POST"> 
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
+                        {% if current_user.is_authenticated %}
+                        <input type="hidden" name="id" value="{{ current_user.id }}">
+                        {% endif %}    
+                            <div class="">
+                            <button class="btn btn-info col-6 color-overlay">Crear Avatar Aleatorio</button> 
+                            </div>                      
+                    </form>
+                            
+                </div>
                 
-                <form action="/generar_avatar" method="POST"> 
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
-                    {% if current_user.is_authenticated %}
-                    <input type="hidden" name="id" value="{{ current_user.id }}">
-                    {% endif %}    
-                    
-                    <button class="css-button-shadow-border--green">Crear Avatar Aleatorio</button>                       
-                </form>
+                <center class="m-3"><p>Completa y edita datos de usuario.</p></center>
+                <div class=""> 
+                    <form action="/editar_usuario" method="POST"> 
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
+                        {% if current_user.is_authenticated %}
+                        <input type="hidden" name="id" value="{{ current_user.id }}">
+                        {% endif %}
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-success col-6 ">Editar datos de usuario</button> 
+                            <br>
+                            <br>
+                        </div>                      
+                    </form>   
+                    <br>  
                         
-            </div>
-            <center><p>Completa y edita datos de usuario.</p></center>
-            <div class="felx-config"> 
-                <form action="/editar_usuario" method="POST"> 
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">                      
-                    {% if current_user.is_authenticated %}
-                    <input type="hidden" name="id" value="{{ current_user.id }}">
-                    {% endif %}
-                    
-                        <button class="css-button-shadow-border--yellow">Editar datos de usuario</button>                       
-                </form>   
-                <br>  
-                    
+                </div>
             </div>
         </div>
-        <br>
-    <div class="felx-usuarios">
-        <center>
-        {% if current_user.is_authenticated %}
-        <p>Nombre de usuario:  {{ current_user.username }} </p>
-        <p>Tipo de usuario:  {{ current_user.tipo }} </p>                
+            <br>
+        <div class="container-sm bg-dark" style="opacity: 0.9;">
+            <br>
+            <br>
+            {% if current_user.is_authenticated %}
+            <p>Nombre de usuario:  {{ current_user.username }} </p>
+            <p>Tipo de usuario:  {{ current_user.tipo }} </p>                
 
-        {% endif %}
-        </center>
+            {% endif %}
+            <br>
+            <br>
+        </div>
     </div>
+</center>
 </section>
 {% endblock %}

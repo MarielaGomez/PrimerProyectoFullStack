@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>{% block titulo %}{% endblock %}</title>
     {% block customCSS %}
+    
 <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/iconos.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
@@ -15,30 +18,38 @@
 <body>
     <nav>
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> 
-        <div class = "container">
-        <div class="container-logo">
-            <h2><span>Mi</span>Logo<span>.</span> 
-                {% if current_user.is_authenticated %}
-                <span id="spn">Bienvenido, {{ current_user.username }}</span></h2>
-                {% else %}
-                    <div id="spn2">
-                        <a href="/login" class="caja-toggle text-toggle">Login</a>
+        <div class = "container-toggle">
+            <div class="container-logo">
+                <div class="row">    
+                    <div class="col-7">
+                    <h2><span>Mi</span>Logo<span>.</span> 
                     </div>
-                    <div  id="spn3">
-                        <a href="/registro" class="caja-toggle text-toggle">Registro</a>  
-                    </div>
-                    
+                        {% if current_user.is_authenticated %}
+                        <span  id="bienvenido" class="text-light">Reparar toggle pendiente... </span></h2>
+                        {% else %}
+                        
+                            <div class="col-3 hid">
+                                <a href="/login" class="caja-toggle text-toggle">Login</a>
+                            </div>
+                            <div id="" class="col-2 hid">
+                                <a href="/registro" class="caja-toggle text-toggle">Registro</a>  
+                            </div>
+                </div>    
                 {% endif %}
+
+                
             
             
         </div>
-        <ul class="links" > 
+        <ul class="links"> 
             
-            <section class="flex-container">           
+            <section class="text-decoration-none">           
                 {% if current_user.is_authenticated %}
-                
+
+                <div >
                 <span id="spn4">Bienvenido, {{ current_user.username }}</span></h2>
-                
+                </div>
+
                 <div class="caja-toggle">
                     <a href="home" class="caja-toggle">
                     <img src="/static/img/iconos/home_white_24dp.svg" class="material-icons">
@@ -67,6 +78,7 @@
                     </a>
                 </div>
             </section>
+            
                      
             {% else %}
             <section class="flex-container"></section>
@@ -97,7 +109,7 @@
                     </a>
                 </div>
 
-                <div class="caja-toggle">
+                <div class="caja-toggle text-decoration-none">
                     <a href="/ingresoContacto" class="caja-toggle">
                     <img src="/static/img/iconos/account_circle_white_24dp.svg" class="material-icons"> 
                     <li class="text-toggle">Contacto</li>
@@ -108,10 +120,23 @@
             
             {% endif %}
         </ul>
-        <div class="toggle">
+        {% if current_user.is_authenticated %}
+        <div id="tg" class="toggle">
+            
             |||
         </div>
-        </vdi>
+        {% else %}
+        <div class="toggle">
+            
+            |||
+        </div>
+        
+        {% endif %}
+
+        
+        
+        
+    </div>
     </nav> 
     
     {% block content %}{% endblock %}
