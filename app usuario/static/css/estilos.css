@@ -6,17 +6,19 @@ label {
 
 .opacity-cero-nueve {
     opacity: 0.9;
+    min-height: 65vh;
+       
 }
 @media screen and (max-width: 600px) {
     .opacity-cero-nueve {
         opacity: 1;
     }
 }
-#spn {
-    position: relative;
-    left: 45vh;
-    
-}
+
+
+
+
+
 
 li {
     list-style: none;
@@ -79,81 +81,6 @@ div#error2 {
     display: none;
 }
 
-/* munu.html */
-nav {
-    background: #021222;
-    height: 80px;
-    position: relative;
-}
-
-.container-logo {
-    margin-left: 20px;
-    z-index: 100;
-    cursor: pointer;
-    position: relative;
-    top: 3vh;
-}
-.container-logo h2 {
-  color: #95bdd8;
-  font-weight: 300;
-  font-size: 35px;
-  letter-spacing: 2px;
-}
-.container-logo h2 span {
-    color: #0590ec;
-    font-weight: 700;
-}
-
-
-
-.toggle {
-    color: #d1faf4;
-    margin-right: 20px;
-    font-size: 30px;
-    transform: rotate(90deg);
-    cursor: pointer;
-    transition:  .3s;
-    display: none;
-    
-    
-}
-
-.rotate { /* la posicion en cascada de este elemento determina su funcinamiento */
-    transform: rotate(180deg);
-}
-
-@media screen and (max-width: 800px) { /* al achicar la pantalla mas de 800 px se muestra el icono-menu */
-    
-    .hid {
-        display: none;
-    }
-    
-    .toggle {
-        display: inline-block;
-    }
-    .links {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background: #021222;
-        text-align: center;
-        overflow: hidden;
-        height: calc(100vh - 80px);
-        width: 100%;
-        z-index: 101; /*oculta menu alachicar la pantalla */
-        top: -100vh; /* oculta el menu desplegable */
-        transition: .3s;
-    }
-    .active {
-        top: 80px;
-    }
-
-    .links .link:hover { /* fondo al menu desplegable, :hover para que qede al pasar el mouse  */
-        background: #051c38;
-    }
-   
-
-}
 
 :root{
     /* colores a utilizar */
@@ -174,36 +101,19 @@ nav {
 
 /* estilos universales */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+
+
+
+body{
+    background-color: #21222c !important;
 }
 
-
-#spn, #spn2, #spn3 {
-    visibility: hidden;
-    list-style: none;
-    text-decoration: none;
-    color: #d1faf4;
-    font-size: 15px;
-    margin: 0 25px;
-    letter-spacing: 3px;
-    position: absolute;
-    top: .25em; right: 15%;   
+.top {
+    position: relative;
+    top: 13vh;
 }
-
-
-
-#spn4 {
-  
-  background-color: #487abb4f;
-  top: 0; right: 15em;
-  
-}
-
-
-
 
 
 

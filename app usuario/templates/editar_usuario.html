@@ -7,7 +7,7 @@ Editar usuario
 <center>
 <section class="fondo-config" >
     
-    <div class="container-sm row bg-dark opacity-cero-nueve">
+    <div class="container-sm row bg-dark opacity-cero-nueve top">
        
             
             <div class="text-light">
@@ -22,7 +22,7 @@ Editar usuario
                     {% if current_user.is_authenticated %}
                     <input type="hidden" name="id" value="{{ current_user.id }}">
                     {% endif %}
-                    <div class="col-9 m-3 ">
+                    <div class="col-12 m-3 ">
                     <label for="username">Usuario:</label>
                     <input class="form-control frm-wh" value="{{datos[1]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="username" id="username">
                     

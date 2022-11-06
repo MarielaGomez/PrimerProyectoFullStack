@@ -2,25 +2,27 @@
 
 {% block title %}Login{% endblock %}
 
-
 {% block content %}
 
-<body class="fondo-config">
+    
+<div class="fondo-config">
+    
+<div class="container-sm bg-dark opacity-cero-nueve top">    
     <center>
-    <section>
-        <div class="container-sm bg-dark opacity-cero-nueve">
+    
+        
             
-            <div class="row m-3 text-light">
+            <div class="row  text-light">
 
-                <div">
+                <div class="container-fluid">
                     <br>
-                    <h3>Bienvenido</h3>
+                    <h3 class="text-center">Bienvenido</h3>
                 </div>
                 
                 
                 <form action="/login" id = "formLogin" method="POST" onsubmit="return validacion()">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <img class="" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="200" height="120">
+                <img class="m-3" src="{{ url_for('static', filename='img/logo_fit.png') }}" alt="" width="110" height="110">
                 {% with messages = get_flashed_messages() %}
 
                 {% if messages %}
@@ -55,10 +57,12 @@
                 <br/>
                 <br />
                 <p class="text-light">No tienes una cuenta?<a href="{{ url_for('registro') }}" class="m-3">Crear cuenta</a></p>
-                <br><br><br>
+                <br>
             </div>
-        </div>
-    </section> 
-    <script src="{{ url_for('static', filename='js/valLogin.js') }}"></script> 
-    </center>      
+ </div>
+
+<script src="{{ url_for('static', filename='js/valLogin.js') }}"></script> 
+</center> 
+
+    
 {% endblock %}

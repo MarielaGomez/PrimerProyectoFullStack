@@ -7,29 +7,58 @@
     
         
     <center> 
-        <!---
-        <script>
-            window.onload = function() {
-	    if(!window.location.hash) {
-		window.location = window.location + '#loaded';
-		window.location.href = "home?#";
-	    }
-        } -->
-        </script>              
-        <div>
-        <h6 class="alert alert-info">Usuario: {{ current_user.tipo }} Reparar toggle pendiente...</h6>
-        </div>
-            <div>
-                <div id="contenedor-slider" class="contenedor-slider">
-                    <div id="slider" class="slider">
-                       <section class="slider__section"><img src="/static/img/slider/8.jpg" class="slider__img"></section>
-                       <section class="slider__section"><img src="/static/img/slider/2.png" class="slider__img"></section>
-                       <section class="slider__section"><img src="/static/img/slider/escalar_montanas.jpg" class="slider__img"></section>
-                       <section class="slider__section"><img src="/static/img/slider/4.webp" class="slider__img"></section>
-                     </div>
-                     <div id="btn-prev" class="btn-prev">&#60;</div>
-                     <div id="btn-next" class="btn-next">&#62;</div>
+                   
+       
+	    <section class="top">
+            <div class="col-wh">
+            <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <div class="carousel-inner">
+                  <div class="carousel-item active c-item">
+                    <img src="/static/img/slider/pexels-photo-1552242.webp" class="d-block w-100 c-img miImagen" alt="Slide 1">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="mt-1 fs-3 text-uppercase">Rutinias - Ejercicios</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %}  
                     </div>
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="/static/img/slider/pexels-photo-6823368.jpeg" class="d-block w-100 c-img" alt="Slide 2">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="text-uppercase fs-3 mt-1">Alimentacion saludable</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %} 
+                    </div>
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="/static/img/slider/pexels-photo-7991666.jpeg" class="d-block w-100 c-img" alt="Slide 3">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="text-uppercase fs-3 mt-1">personal trainer</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %} 
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
             <section class="felx-index" id="felx-index">
                 
@@ -64,11 +93,16 @@
                 </div>
 
             </section>
-         
+        </section>
     </center>  
 
+    <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("abajo",window.scrollY>0);
+		})
+	</script>
     
-    <script src="/static/js/slider.js"></script>
     
     {% endblock %}
     
