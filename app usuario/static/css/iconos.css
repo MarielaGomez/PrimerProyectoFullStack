@@ -11,15 +11,6 @@
   border-radius:150px;
   border: #fff solid 1px;
 }
-
-
-
-
-  
-
-
- 
-
   
   .text {
     padding: 5%;
@@ -30,99 +21,6 @@
   flex-direction:column-reverse;
 }
 
-  #sl1 {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    height: 200px;         
-    padding-top: 2%;
-    position: relative;
-    
-    box-shadow: 0 0 0 1px #fff,
-    0 1px 1px; /*sombra*/
-    min-height: 100%; /* alto*/
-    background-image: url(/static/img/slider/montaña.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover; /*cubra toda el area*/
-    background-position-x: 70%;
-    background-attachment: fixed; /*siempre se muestre en todo el fondo*/
-    z-index: 1;  
-    opacity: 0.8;
-      
-  }
-
-  #sl2 {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;    
-    max-width: 95em; /*ancho maximio*/      
-    padding-top: 2%;
-    position: relative;
-    top: 0px;
-    left: 0%;
-    box-shadow: 0 0 0 1px #fff,
-    0 1px 1px; /*sombra*/
-    background: #bfd896ab;
-    text-align: center;     
-  }
-
-  #sl3 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
-    max-width: 95em; /*ancho maximio*/       
-    position: relative;
-    
-    z-index: 1;     
-    background: #b86bd68c;
-    margin: 1px solid #fff; 
-    box-shadow: 0 0 0 1px #fff,
-    0 1px 1px; /*sombra*/      
-    display: flex;
-    align-items: center;                
-  }
-
-  #sl4 {
-    
-    width: 100%;
-    height: 200px;
-    max-width: 95em; /*ancho maximio*/       
-    position: relative;
-    top: 0px;
-    left: 0;
-    z-index: 1;     
-    background: #487abb;
-    box-shadow: 0 0 0 1px #fff,
-    0 1px 1px; /*sombra*/
-    min-height: 100%; /* alto*/
-    background-image: url(/static/img/slider/escalar_montanas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; /*cubra toda el area*/
-    background-position-x: -20em;
-    background-attachment: fixed; /*siempre se muestre en todo el fondo*/      
-    z-index: 1;    
-    opacity: 0.8;   
-  }
-
-  #sl5 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    max-width: 95em; /*ancho maximio*/       
-    position: relative;
-    top: 0px;
-    left: 0%;
-    z-index: 1;     
-    background: #487abb;
-    margin: 1px solid #fff; 
-    box-shadow: 0 0 0 1px #fff,
-    0 1px 1px; /*sombra*/    
-    align-items: center;
-    
-    
-  }
   
 
 
@@ -149,110 +47,7 @@
     /*-----------------*/
     .text {
       padding: 5%;
-    }
-
-    #sl1 {
-      width: 40%;
-      height: 400px;     
-      position: absolute;
-      top: 0px;
-      left: 60%;
-      box-shadow: 0 0 0 1px #fff,
-      0 1px 1px; /*sombra*/     
-      background-position:center;
-      
-       
-    }
-
-   
-
-    #sl1:hover{ 
-      transition: 0.5s;
-      opacity: 1;
-      
-       
-    }
-
-    #sl2 {
-      width: 60%;
-      height: 400px;
-      max-width: 95em; /*ancho maximio*/      
-      padding-top: 2%;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      box-shadow: 0 0 0 1px #fff,
-      0 1px 1px; /*sombra*/
-      background: #bfd896ab;
-      text-align: center;
-      overflow: hidden;     
-    }
-
-    #sl3 {
-      width: 60%;
-      height: 100%;
-      max-width: 95em; /*ancho maximio*/       
-      position: absolute;
-      top: 0px;
-      left: 40%;
-      z-index: 1;     
-      background: #b86bd68c;
-      margin: 1px solid #fff; 
-      box-shadow: 0 0 0 1px #fff,
-      0 1px 1px; /*sombra*/      
-      display: flex;
-      align-items: center;  
-      overflow: hidden;              
-    }
-
-    #sl4 {
-      width: 40%;
-      height: 100%;
-      max-width: 95em; /*ancho maximio*/       
-      position: absolute;
-      top: 0px;
-      left: 0;
-      z-index: 1;     
-      background: #487abb;
-      box-shadow: 0 0 0 1px #fff,
-      0 1px 1px; /*sombra*/
-      min-height: 100%; /* alto*/
-      background-image: url(/static/img/slider/escalar_montanas.jpg);
-      background-repeat: no-repeat;
-      background-size: cover; /*cubra toda el area*/
-      background-position-x: -20em;
-      background-attachment: fixed; /*siempre se muestre en todo el fondo*/      
-      z-index: 1;       
-    }
-
-    #sl4:hover{ 
-      transition: 0.5s;
-      opacity: 1;
-      
-       
-    }
-  
-    #sl5 {
-      width: 100%;
-      height: 100%;
-      max-width: 95em; /*ancho maximio*/       
-      position: absolute;
-      top: 0px;
-      left: 0%;
-      z-index: 1;     
-      background: #487abb;
-      margin: 1px solid #fff; 
-      box-shadow: 0 0 0 1px #fff,
-      0 1px 1px; /*sombra*/
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      
-      
-    }
-    
-    
-    
+    }    
 
 
     /*------------------------fin-index------------------*/
@@ -275,7 +70,6 @@
 
     
 }
-
 
 .toggle {
   display: inline-block;

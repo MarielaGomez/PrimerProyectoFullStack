@@ -63,7 +63,9 @@ li {
     }
 }
 
-
+.margen-card {
+    margin-top: 20vh;
+}
 
 
 
@@ -80,31 +82,6 @@ div#error2 {
 ::-webkit-scrollbar { /*oculta el scroll*/
     display: none;
 }
-
-
-:root{
-    /* colores a utilizar */
-    --green: hsl(162, 45%, 56%);
-    --lead: hsl(162, 2%, 56%);
-    --blue: hsl(220, 85%, 57%);
-    --violet: hsla(272, 91%, 32%, 0.164);
-    /* color de texto */
-    --text-while: hsl(0, 0%, 100%);
-    --text-light-gray: hsl(0, 0%, 90%);
-    --body-bg-color: hsl(201, 61%, 23%); /* color del body */
-    --glass-bg-color: hsla(0, 0%, 100%, 0.25);
-    --border-color: hsla(0, 0%, 100%, 0.25);
-    --blur: blur(10px); /* dar desenfoque gauciano a determinado elemento */
-    --button_hover-color: hsla(0, 0%, 0%, 0.3); /* cambia color de boton al pasar cursor */
-    --button_hover-color2: hsla(0, 26%, 95%, 0.3); /* cambia color de boton al pasar cursor */
-}
-
-/* estilos universales */
-
-
-
-
-
 
 body{
     background-color: #21222c !important;
