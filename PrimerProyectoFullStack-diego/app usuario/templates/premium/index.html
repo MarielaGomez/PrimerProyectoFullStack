@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+{% block titulo %} Principal {% endblock %}
+
+{% block content %}
+    
+    
+    
+        
+    <center> 
+                   
+       
+	    <section class="top">
+            <div class="col-wh">
+            <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <div class="carousel-inner">
+                  <div class="carousel-item active c-item">
+                    <img src="/static/img/slider/pexels-photo-1552242.webp" class="d-block w-100 c-img miImagen" alt="Slide 1">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="mt-1 fs-3 text-uppercase">Rutinias - Ejercicios</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %}  
+                    </div>
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="/static/img/slider/pexels-photo-6823368.jpeg" class="d-block w-100 c-img" alt="Slide 2">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="text-uppercase fs-3 mt-1">Alimentacion saludable</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %} 
+                    </div>
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="/static/img/slider/pexels-photo-7991666.jpeg" class="d-block w-100 c-img" alt="Slide 3">
+                    <div class="carousel-caption top-0 mt-4">
+                      <p class="text-uppercase fs-3 mt-1">personal trainer</p>
+                      {% if current_user.is_authenticated %}
+                      {% else %}
+                      <a href="/login"><button class="btn btn-primary px-4 py-2 fs-5 mt-1">Login</button></a>
+                      {% endif %} 
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="margen-card">
+
+        <div class="container">
+          <div class="row g-3">
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card">
+                      <img src="/static/img/cards/VR3AzpD.jpg" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">¿Cómo se ven los Resultados en un Mes de Gimnasio?</h5>
+                          <p class="card-text">Los milagros no existen. Al menos no en el mundo del entrenamiento. Si quieres ver resultados en un mes de gimnasio tienes que trabajar duro</p>
+                          <a href="#" class="btn btn-primary">Ver artículo</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card">
+                      <img src="/static/img/cards/reFvq6b.jpg" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">Características de la preparación táctica en el deporte</h5>
+                          <p class="card-text">La preparación táctica consiste en la adquisición de conocimientos teóricos y su dominio en la praxis en relación con el deporte practicado. En la preparación táctica...</p>
+                          <a href="#" class="btn btn-primary">Ver artículo</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card">
+                      <img src="/static/img/cards/P4axTUj.png" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">¿Por qué el ejercicio es bueno para la salud de las personas?</h5>
+                          <p class="card-text">Todos sabemos que el ejercicio es bueno para la salud, pero pocos se preguntan ¿por qué? La mayoría de las personas lo practican por un tema estético.</p>
+                          <a href="#" class="btn btn-primary">Ver artículo</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        
+          <div class="container">
+            <div class="row g-3 mt-2">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="/static/img/cards/pexels-photo-1552242.webp" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Rutina - ejercicio</h5>
+                            <p class="card-text">10 Efectos del Ejercicio Físico en la Salud que seguramente no conocías.</p>
+                            <a href="#" class="btn btn-primary">Ver artículo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="/static/img/cards/pexels-photo-6823368.jpeg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Los Mejores Alimentos para una Dieta Equilibrada</h5>
+                            <p class="card-text">Cuando se trata de comer sano, hay muchas opiniones diferentes por ahí.</p>
+                            <a href="#" class="btn btn-primary">Ver artículo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="/static/img/cards/pexels-photo-7991666.jpeg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Influencia del entrenador en la enseñanza de la técnica</h5>
+                            <p class="card-text">La influencia del entrenador es vital en la enseñanza de la técnica deportiva.</p>
+                            <a href="#" class="btn btn-primary">Ver artículo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        </section>
+    </center>  
+
+    
+    
+    
+    {% endblock %}
+    
