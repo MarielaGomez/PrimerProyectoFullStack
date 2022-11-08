@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% block titulo %} Principal {% endblock %}
+
+{% block content %}
+    
+    
+    
+        
+    <center> 
+        <!---
+        <script>
+            window.onload = function() {
+	    if(!window.location.hash) {
+		window.location = window.location + '#loaded';
+		window.location.href = "home?#";
+	    }
+        } -->
+        </script>              
+        
+        <h3 >Usuario: {{ current_user.tipo }}</h3>
+            <div>
+                <div id="contenedor-slider" class="contenedor-slider">
+                    <div id="slider" class="slider">
+                       <section class="slider__section"><img src="/static/img/slider/gimnasio7.jpg" class="slider__img"></section>
+                       <section class="slider__section"><img src="/static/img/slider/gimnasio5.jpg" class="slider__img"></section>
+                       <section class="slider__section"><img src="/static/img/slider/gimnasio4.jpeg" class="slider__img"></section>
+                       <section class="slider__section"><img src="/static/img/slider/gimnasio6.jpg" class="slider__img"></section>
+                     </div>
+                     <div id="btn-prev" class="btn-prev">&#60;</div>
+                     <div id="btn-next" class="btn-next">&#62;</div>
+                    </div>
+            </div>
+            <section class="felx-index" id="felx-index">
+                
+                <div id="sl1">
+                    
+                </div>
+                <div id="sl2" class="text">
+                    <p><br> La importancia de la Actividad Física.
+                        <br>
+                        <br>
+                        La práctica habitual de actividad física garantiza movilidad, un peso estable, controla el sistema circulatorio y además ayuda al sistema nervioso. Es  necesario mencionar que debe ser acompañada por una alimentación equilibrada y saludable, el buen descanso, y la hidratación continua durante el día.
+                        Cuando el cuerpo se encuentra en movimiento libera endorfinas que generan energía.
+                        <br>
+                        <br>
+                        Luego de hacer actividad física al estar más distendidos, la capacidad de concentración aumentará, mejorando así diversos procesos como por ejemplo el de construcción de conocimientos.</p>
+                </div>
+            </section>
+            <section class="felx-index">
+                
+                <div id="sl3" class="text" text>
+                    <p>Por qué nosotros?
+                    <br>
+                    <br>
+                    En nuestro gimnasio contamos con profesores con una amplia trayectoria y experiencia profesional, los cuales cuentan con el compromiso y conocimientos técnicos necesarios para trabajar con la salud.
+                    <br>
+                    <br>
+                    Cabe destacar que nuestro equipo esta correctamente capacitado para trabajar con sujetos pertenecientes a las distintas franjas etarias contemplando particularidades que se presentan regularmente en las mismas.
+                    </p>
+                </div>
+                <div id="sl4">
+
+                </div>
+            </section>
+            <section class="felx-index">
+                <div id="sl5" class="text">
+                    <p>Objetivos y Servicios</p>
+                    <br>
+                    <br>
+                    Nuestro objetivo principal es brindar un servicio de calidad orientado a atender las necesidades individuales de los clientes proporcionandoles bienestar y el desarrollo de una salud integral. A su vez tambien ofrecemos un establecimiento recreacional para aquellas personas que deseen ejercitarse en un ambiente común con la ayuda de profesionales en la salud los cuales estaran a dispocision para orientarlos logrando así mantener y mejorar su condicion física.
+                    <br>
+                    <br>
+                    Entre nuestros servicios podran encontrar la sala de musculacion donde se brindaran planificaciones acorde a los objetivos especificos de los clientes. Como así tambien diversas actividades como spinning, ritmos, funcional kids, funcional para la 3ra edad, entre otras...
+                </div>
+
+            </section>
+         
+    </center>  
+
+    
+    <script src="/static/js/slider.js"></script>
+    
+    {% endblock %}
+    

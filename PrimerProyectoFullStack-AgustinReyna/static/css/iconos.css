@@ -1,0 +1,670 @@
+
+
+::placeholder{
+  color: #d90429;
+}
+
+.flex-container {   
+    
+   flex-direction: column;
+   line-height: 30px;
+   
+   box-sizing: border-box;   
+   padding: .5em;
+   
+}
+
+
+
+#spn, #spn2, #spn3 {
+    visibility: hidden;
+    list-style: none;
+    text-decoration: none;
+    color: #d1faf4;
+    font-size: 15px;
+    margin: 0 25px;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 0.25em; right: 15%;   
+}
+
+#spn2 {       
+    top: 1.2em; right: 25em;
+}
+#spn3{    
+    top: 1.2em; right: 15em;
+}
+
+#spn4 {
+  
+  background-color: #487abb4f;
+}
+
+
+#avatar {
+  margin-left: 52%;
+  transform: translateX(-50%);
+  background-color: #487abb;
+  width: 12em;
+  height: 12em;
+  border-radius:150px;
+  border: #fff solid 1px;
+
+}
+
+
+
+.caja-toggle {   
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    line-height: 50px;
+    padding-left: 5%;
+    
+    
+    
+}
+
+.text-toggle {
+    list-style: none;
+    text-decoration: none;
+    color: #d1faf4;
+     font-size: 20px;
+     margin: 0 25px;
+    letter-spacing: 3px;
+    
+    
+    
+}
+
+.material-icons {
+    width: 30px;
+    height: 30px; 
+    position: relative;
+    right: 1em;
+    filter: invert(48%) sepia(10%) saturate(1000%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  }
+
+  .felx-usuarios {
+    border: #fff solid 1px;
+    
+    background: #244b8631;
+    padding: 20px;
+    
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap; /*acomodar en mas de una linea*/
+  }
+
+
+.felx-config {
+  width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+  margin-left: 50%;
+  transform: translateX(-50%); 
+  padding: 1%;  
+}
+
+
+
+
+#boton-editar-usuario-guardar {
+    width: 30px;
+     
+    
+    left: 1em;
+    flex-direction: row;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    
+
+}
+#boton-editar-usuario-volver {
+    width: 30px;    
+    left: 1em;
+    flex-direction: row;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    
+    
+    
+}
+
+.form-input{
+  height: 35px;
+  width: 95%;
+  border: 2px solid rgba(201, 195, 195, 0.76);
+  border-radius: 5px;
+  
+}
+
+   /*-------------------------slider--------------*/
+   * {
+    box-sizing: border-box;
+  }
+     
+  
+  .contenedor-slider {
+    margin: auto;
+    width: 100%;
+    height: 180px;
+     /*ancho maximio*/
+    position: relative; /*para que se posicionen los botones */
+    overflow: hidden; /* para que el contenido que salga no mse muestre */
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/
+    opacity: 0.7;
+    
+    
+  }
+  
+  .slider {
+    display: flex;
+    width: 400%; /*400% porque son 4 imagenes */ 
+  }
+  
+  .slider__section {
+    width: 100%;
+  }
+  
+  .slider__img {
+    width: 100%;
+    height: 100% !important; 
+    
+  }
+  
+  .btn-prev, .btn-next {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  
+  /* cuando pase el mouse */
+  .btn-prev:hover, .btn-next:hover {
+    background: white;
+  }
+  
+  .btn-prev {
+    left: 10px;
+  }
+  
+  .btn-next {
+    right: 10px;
+  }
+  /* -------------------------fin slider-------------------------*/
+
+  /*--------------sl----------------------------------*/
+  .text {
+    padding: 5%;
+  }
+
+#felx-index{
+  display: flex;
+  flex-direction:column-reverse;
+}
+
+  #sl1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 200px;         
+    padding-top: 2%;
+    position: relative;
+    
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/
+    min-height: 100%; /* alto*/
+    background-image: url(/static/img/slider/gimnasio1.jpg); /*esta es la web*/
+    background-repeat: no-repeat;
+    background-size: cover; /*cubra toda el area*/
+    background-size: 100% 100%;
+    background-position-x: 15%;
+    background-position-y: 53.5%;
+    background-attachment: scroll; /*siempre se muestre en todo el fondo*/
+    z-index: 1;  
+    opacity: 0.8;
+      
+  }
+
+  #sl2 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;    
+    max-width: 95em; /*ancho maximio*/      
+    padding-top: 2%;
+    position: relative;
+    top: 0px;
+    left: 0%;
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/
+    background: #bfd896ab;
+    text-align: center;     
+  }
+
+  #sl3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    max-width: 95em; /*ancho maximio*/       
+    position: relative;
+    
+    z-index: 1;     
+    background: #b86bd68c;
+    margin: 1px solid #fff; 
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/      
+    display: flex;
+    align-items: center;                
+  }
+
+  #sl4 {
+    
+    width: 100%;
+    height: 200px;
+    max-width: 95em; /*ancho maximio*/       
+    position: relative;
+    top: 0px;
+    left: 0;
+    z-index: 1;     
+    background: #487abb;
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/
+    min-height: 100%; /* alto*/
+    background-image: url(/static/img/slider/gimnasio3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*cubra toda el area*/
+    background-position-x: -20em;
+    background-attachment: fixed; /*siempre se muestre en todo el fondo*/      
+    z-index: 1;    
+    opacity: 0.8;   
+  }
+
+  #sl5 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 95em; /*ancho maximio*/       
+    position: relative;
+    top: 0px;
+    left: 0%;
+    z-index: 1;     
+    background: #487abb;
+    margin: 1px solid #fff; 
+    box-shadow: 0 0 0 1px #fff,
+    0 1px 1px; /*sombra*/    
+    align-items: center;
+    
+    
+  }
+  
+
+
+/*---------------fin sl-----------------------------*/
+
+@media screen and (min-width: 800px) {
+    .flex-container {  
+    
+        flex-direction: column;
+        line-height: 30px;
+        text-align: center;
+        box-sizing: border-box;   
+        padding: .5em;
+        
+     }
+     #spn4 {
+      visibility: hidden;
+      background-color: #487abb;
+    }
+   
+     .caja-toggle {
+        line-height: 50px;
+        
+        
+    }
+
+    #spn, #spn2, #spn3 {
+        visibility: visible;
+    }
+
+    .toggle {
+        display: inline-block;
+        position: absolute;
+        top: 5px; right: 40px;
+       
+    }
+    .links {
+        position: absolute;
+        top: 40px; right: 40px;
+        flex-direction: column;
+        background: #021222;
+        text-align: center;
+        
+        height: 350%;
+        width: 30%;
+        min-width: 22em;
+        z-index: 101; /*oculta menu alachicar la pantalla */
+        top: -100vh; /* oculta el menu desplegable */
+        transition: .3s;
+    }
+    .active {
+        top: 80px;
+    }
+
+    .links .link:hover { /* fondo al menu desplegable, :hover para que qede al pasar el mouse  */
+        background: #051c38;
+    }
+    
+    .felx-usuarios {
+      width: 60%;
+      padding-top: 2%;
+      position: relative;
+      top:  10px;
+      background-color: #487abbd3;
+    /* ----------------index----------------------------*/
+    }
+    .felx-index {
+      width: 90%;
+      height: 400px;
+      max-width: 95em; /*ancho maximio*/      
+      padding-top: 2%;
+      position: relative;
+      top:  10px;
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/      
+    }
+
+    /*-----------------*/
+    .text {
+      padding: 5%;
+    }
+
+    #sl1 {
+      width: 40%;
+      height: 400px;     
+      position: absolute;
+      top: 0px;
+      left: 60%;
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/     
+      background-position:center;
+      
+       
+    }
+
+   
+
+    #sl1:hover{ 
+      transition: 0.5s;
+      opacity: 1;
+      
+       
+    }
+
+    #sl2 {
+      width: 60%;
+      height: 400px;
+      max-width: 95em; /*ancho maximio*/      
+      padding-top: 2%;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/
+      background: #bfd896ab;
+      text-align: center;
+      overflow: hidden;     
+    }
+
+    #sl3 {
+      width: 60%;
+      height: 100%;
+      max-width: 95em; /*ancho maximio*/       
+      position: absolute;
+      top: 0px;
+      left: 40%;
+      z-index: 1;     
+      background: #b86bd68c;
+      margin: 1px solid #fff; 
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/      
+      display: flex;
+      align-items: center;  
+      overflow: hidden;              
+    }
+
+    #sl4 {
+      width: 40%;
+      height: 100%;
+      max-width: 95em; /*ancho maximio*/       
+      position: absolute;
+      top: 0px;
+      left: 0;
+      z-index: 1;     
+      background: #487abb;
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/
+      min-height: 100%; /* alto*/
+      background-image: url(/static/img/slider/gimnasio3.jpg); /*esta es la web*/
+      background-repeat: no-repeat;
+      background-size: cover; /*cubra toda el area*/
+      background-size: 100% 100%;
+      background-position-x: 15%;
+      background-position-y: 53.5%;
+      background-attachment: scroll; /*siempre se muestre en todo el fondo*/      
+      z-index: 1;       
+    }
+
+    #sl4:hover{ 
+      transition: 0.5s;
+      opacity: 1;
+      
+       
+    }
+  
+    #sl5 {
+      width: 100%;
+      height: 100%;
+      max-width: 95em; /*ancho maximio*/       
+      position: absolute;
+      top: 0px;
+      left: 0%;
+      z-index: 1;     
+      background: #487abb;
+      margin: 1px solid #fff; 
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      
+      
+    }
+    
+    
+    
+
+
+    /*------------------------fin-index------------------*/
+
+    .form-input{
+      width: 30em;
+      
+    }
+    #fondo-config, #editar-fondo, #registro-fondo {
+      min-height: 70vh; /* alto*/
+      background-image: url(/static/img/slider/gimnasio1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover; /*cubra toda el area*/
+      background-position: center;
+      background-attachment: fixed; /*siempre se muestre en todo el fondo*/
+      z-index: 1;
+    }
+    /*degradado */
+    #fondo-config::before, #editar-fondo::before, #registro-fondo::before {
+      content: ""; /* los pseudoelementos deben tener content para funcionar */
+      width: 100%;
+      min-height: 100%;
+      position: absolute; /* debe estar para que funcione el z-index*/
+      top: 0;
+      left: 0;
+
+      background: linear-gradient(45deg, #52c4df, #ad55c1); /*primero los grados del degadado*/
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    /*-------------------------slider--------------*/
+    * {
+      box-sizing: border-box;
+    }
+       
+    
+    .contenedor-slider {
+      margin: auto;
+      width: 90%;
+      height: 300px;
+      max-width: 95em; /*ancho maximio*/
+      position: relative; /*para que se posicionen los botones */
+      overflow: hidden; /* para que el contenido que salga no mse muestre */
+      box-shadow: 0 0 0 1px #fff,
+      0 1px 1px; /*sombra*/
+      opacity: 0.7;
+      
+      
+    }
+    
+    .slider {
+      display: flex;
+      width: 400%; /*400% porque son 4 imagenes */ 
+    }
+    
+    .slider__section {
+      width: 100%;
+    }
+    
+    .slider__img {
+      width: 100%;
+      height: 90% !important;       
+    }
+    
+    .btn-prev, .btn-next {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 40px;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50%;
+      font-family: monospace;
+      cursor: pointer;
+    }
+    
+    /* cuando pase el mouse */
+    .btn-prev:hover, .btn-next:hover {
+      background: white;
+    }
+    
+    .btn-prev {
+      left: 10px;
+    }
+    
+    .btn-next {
+      right: 10px;
+    }
+    /* -------------------------fin slider------------------------- */
+    
+}
+
+
+ .text-toggle:hover {
+     color: #487abb;
+ }
+
+
+ .css-button-shadow-border--red {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #d90429;
+  }
+  .css-button-shadow-border--red:hover {
+    background-color: #ef233c;
+  }
+  .css-button-shadow-border--red:active {
+    top: 2px;
+  }
+
+  .css-button-shadow-border--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #57cc99;
+  }
+  .css-button-shadow-border--green:hover {
+    background-color: #80ed99;
+  }
+  .css-button-shadow-border--green:active {
+    top: 2px;
+  }
+
+  .css-button-shadow-border--yellow {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #b89b0f;
+  }
+  .css-button-shadow-border--yellow:hover {
+    background-color: #ffe566;
+  }
+  .css-button-shadow-border--yellow:active {
+    top: 2px;
+  }
