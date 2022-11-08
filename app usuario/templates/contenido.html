@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<center>
+<div class="encabezado">
+    <div class="entrada">
+        <br />
+        
+        <div id="contenedor-slider" class="contenedor-slider">
+            <div id="slider" class="slider">
+               <section class="slider__section"><img src="/static/img/slider/8.jpg" class="slider__img"></section>
+               <section class="slider__section"><img src="/static/img/slider/2.png" class="slider__img"></section>
+               <section class="slider__section"><img src="/static/img/slider/escalar_montanas.jpg" class="slider__img"></section>
+               <section class="slider__section"><img src="/static/img/slider/4.webp" class="slider__img"></section>
+             </div>
+             <div id="btn-prev" class="btn-prev">&#60;</div>
+             <div id="btn-next" class="btn-next">&#62;</div>
+            </div>
+    </div>
+</div>
+
+</center>
+<script src="/static/js/slider.js"></script>
+{% endblock %}
