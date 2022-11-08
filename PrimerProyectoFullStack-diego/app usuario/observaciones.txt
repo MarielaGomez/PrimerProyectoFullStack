@@ -1,8 +1,0 @@
-Pendientes:
-mejorar formulario de envío de correo, solo esta funcional.
-Ordenar archivos en general.
-limpieza de codigo en general.
-
-
-
-Se se puede observar funcionando version preliminar en la ip: 190.96.112.66
