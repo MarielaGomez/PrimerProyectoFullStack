@@ -1,0 +1,26 @@
+pip install Flask
+pip install flask_mysqldb
+pip install flask_wtf
+pip install notify-py
+pip install flask_login
+pip install pymysql
+pip install python-avatars
+
+- conectar con base de datos en archivo config.py:
+por el momento pide los datos de la bd en dos partes del archivo (pendiente de corregir)
+
+class DevelopmentConfig(Config):
+    DEBUG = True
+    MYSQL_HOST = 'localhost'
+    MYSQL_USER = 'root'
+    MYSQL_PASSWORD = ''
+    MYSQL_DB = 'app_usuario'
+
+def obtener_conexion():
+    return pymysql.connect(host='localhost',
+                                user='root',
+                                password='',
+                                db='app_usuario')
+
+
+ejecutar en terminal el archivo app.py 
