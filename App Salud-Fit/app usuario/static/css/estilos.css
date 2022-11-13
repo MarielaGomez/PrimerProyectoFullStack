@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+label {
+	display: block;
+}
+
+.opacity-cero-nueve {
+    opacity: 0.9;
+    min-height: 65vh;
+       
+}
+@media screen and (max-width: 600px) {
+    .opacity-cero-nueve {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+li {
+    list-style: none;
+    text-decoration: none;    
+}
+
+.frm-wh {
+
+    max-width: 60vh;
+}
+@media screen and (max-width: 750px) {
+    .frm-wh {
+        max-width: 95%;
+        min-width: 90%;
+    }
+}
+
+
+.margin-form {
+    margin-left: 35%;
+}
+@media screen and (max-width: 800px) {
+    .margin-form {
+        margin-left: 5%;
+    }
+}
+
+#bienvenido{
+    position: relative;
+    margin-left: 150%;
+    top: -55px;
+}
+
+#tg {
+    position: relative;
+    top: -110px;
+    left: 270%;
+}
+@media screen and (max-width: 800px) {
+    #tg {
+        left: 100%;
+    }
+}
+
+.margen-card {
+    margin-top: 20vh;
+}
+
+
+
+
+
+div#error2 {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
+
+::-webkit-scrollbar { /*oculta el scroll*/
+    display: none;
+}
+
+body{
+    background-color: #21222c !important;
+}
+
+.top {
+    position: relative;
+    top: 13vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

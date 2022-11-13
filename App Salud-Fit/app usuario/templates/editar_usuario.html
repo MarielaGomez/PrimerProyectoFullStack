@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+{% block titulo %}
+Editar usuario
+{% endblock %}
+{% block content %}
+<center>
+<section class="fondo-config" >
+    
+    <div class="container-sm row bg-dark opacity-cero-nueve top">
+       
+            
+            <div class="text-light">
+                <div>
+                    <br>
+            
+                    <h3 class="is-size-3">Editar datos de usuario</h3>
+                    
+                </div>
+                <form action="{{url_for('actualizar_usuario')}}" method="post">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> 
+                    {% if current_user.is_authenticated %}
+                    <input type="hidden" name="id" value="{{ current_user.id }}">
+                    {% endif %}
+                    <div class="col-12 m-3 ">
+                    <label for="username">Usuario:</label>
+                    <input class="form-control frm-wh" value="{{datos[1]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="username" id="username">
+                    
+                    <label for="dni">DNI</label>
+                    <input class="form-control frm-wh" value="{{datos[2]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="dni" id="dni">
+                    
+                    <label for="email">Email</label>
+                    <input class="form-control frm-wh" value="{{datos[3]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="email" id="email">
+
+                    <label for="nombres">Nombres</label>
+                    <input class="form-control frm-wh" value="{{datos[4]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="nombres" id="nombres">
+
+                    <label for="apellido">Apellido</label>
+                    <input class="form-control frm-wh" value="{{datos[5]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="apellido" id="apellido">
+
+                    <label for="direccion">Dirección</label>
+                    <input class="form-control frm-wh" value="{{datos[6]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="direccion" id="direccion">
+
+                    <label for="numeracion">Numeración</label>
+                    <input class="form-control frm-wh" value="{{datos[7]}}" required type="text" class="input" placeholder="Completar datos de usuario" name="numeracion" id="numeracion">
+                    </div>
+                    
+                    
+                    <div class="m-3">
+                        <button type="submit" id= "boton-editar-usuario-guardar" class="btn btn-success">Guardar</button>
+                        <a href="/config_usuario" id= "boton-editar-usuario-volver" class="btn btn-warning">Volver</a>
+                        <br><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+   
+    </div>
+</section>
+</center>
+{% endblock %}
