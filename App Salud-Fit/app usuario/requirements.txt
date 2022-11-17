@@ -1,3 +1,6 @@
+Se se puede observar funcionando version preliminar en la ip: 190.96.112.66
+
+
 pip install Flask
 pip install flask_mysqldb
 pip install flask_wtf
